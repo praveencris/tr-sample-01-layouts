@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.layouts.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_linearLayoutFragment"
+            app:destination="@id/linearLayoutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_relativeLayoutFragment"
+            app:destination="@id/relativeLayoutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listViewFragment"
+            app:destination="@id/listViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linearLayoutFragment"
+        android:name="com.example.layouts.LinearLayoutFragment"
+        android:label="fragment_linear_layout"
+        tools:layout="@layout/fragment_linear_layout" />
+    <fragment
+        android:id="@+id/relativeLayoutFragment"
+        android:name="com.example.layouts.RelativeLayoutFragment"
+        android:label="fragment_relative_layout"
+        tools:layout="@layout/fragment_relative_layout" />
+    <fragment
+        android:id="@+id/listViewFragment"
+        android:name="com.example.layouts.ListViewFragment"
+        android:label="fragment_list_view"
+        tools:layout="@layout/fragment_list_view" />
+</navigation>
