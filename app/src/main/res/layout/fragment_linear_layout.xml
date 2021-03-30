@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LinearLayoutFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="10"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/titleTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:padding="@dimen/normal_padding"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/linear_layout" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="@string/first" />
+
+    <Button
+        android:id="@+id/btnPauseService"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:text="@string/second" />
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:text="@string/third" />
+
+</LinearLayout>

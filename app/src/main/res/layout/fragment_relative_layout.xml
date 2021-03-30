@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,8 +7,46 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/titleTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:padding="@dimen/normal_padding"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/relative_layout" />
 
-</FrameLayout>
+     <Button
+         android:id="@+id/firstButton"
+         android:layout_below="@id/titleTextView"
+         android:text="@string/first"
+         android:layout_margin="@dimen/normal_margin"
+         android:layout_width="match_parent"
+         android:layout_height="144dp"/>
+    <Button
+        android:id="@+id/secondButton"
+        android:layout_alignLeft="@id/firstButton"
+        android:layout_alignStart="@id/firstButton"
+        android:layout_below="@id/firstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/second"
+        />
+
+    <Button
+        android:id="@+id/thirdButton"
+       android:layout_alignRight="@id/firstButton"
+        android:layout_alignEnd="@id/firstButton"
+        android:layout_below="@id/firstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_toRightOf="@id/secondButton"
+        android:layout_toEndOf="@id/secondButton"
+        android:text="@string/second"
+        />
+
+</RelativeLayout>

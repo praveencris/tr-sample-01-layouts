@@ -40,6 +40,9 @@ class MainFragment : Fragment() {
         view.findViewById<Button>(R.id.linearLayoutButton).setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_linearLayoutFragment)
         }
+        view.findViewById<Button>(R.id.relativeLayoutButton).setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_relativeLayoutFragment)
+        }
 
         return view;
     }
